@@ -4,10 +4,9 @@ from retrying import retry
 
 
 class PubchemCrawl():
-    def __init__(self, cid_path, out_path, max_workers=4):
+    def __init__(self, cid_path, out_path):
         self.cid_path = cid_path
         self.out_path = out_path
-        self.max_workers = max_workers
         self.maps = {
             'cid': 'CID',
             'iupac_name': 'IUPACName',
