@@ -5,6 +5,7 @@ with open('cid.txt') as f:
     cid_str = ''
     for i in f.readlines()[:399]: # limit 399.
         cid_str += i.strip()+','
+        
 
 property_list = [
     "IUPACName",
@@ -15,10 +16,10 @@ property_list = [
     "HBondAcceptorCount"
 ]
 property_str = ','.join(property_list)
-return_type = 'csv'
+return_type = 'json'
 url = f'{root}{cid_str}/property/{property_str}/{return_type}'
 res = requests.get(url)
-with open('test.csv', 'wb') as f:
+with open('data.json', 'wb') as f:
     f.write(res.content)
 '''
 https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/129907609/synonyms/json
