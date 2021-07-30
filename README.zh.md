@@ -1,6 +1,6 @@
 [English](README.md) | 简体中文
 # 简介
-从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)爬取化合物的数据（基于[PubChem PUG REST API](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest)）。
+根据**CID**从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)爬取化合物的数据（基于[PubChem PUG REST API](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest)）。
 # 演示
 ![demo](demo.gif)
 # 安装

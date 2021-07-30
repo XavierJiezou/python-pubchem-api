@@ -1,6 +1,6 @@
 [简体中文](README.zh.md) | English
 # Introduction
-Crawl data of compounds from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) base on [PubChem PUG REST API](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest).
+Crawl data of compounds from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) by **CID** based on [PubChem PUG REST API](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest).
 # Demo
 ![demo](demo.gif)
 # Install
