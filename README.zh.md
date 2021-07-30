@@ -17,9 +17,9 @@ git clone https://github.com/XavierJiezou/python-pubchem-api.git
 cd python-pubchem-api
 ```
 3. 将`cid`列表复制到`cid.txt`。
-4. 运行命令`python main.py`.
+4. 运行命令`python pubchem.py`.
 5. 爬取结果保存在`data.json`或者`data.csv`.
-6. 你也可以根据下面的**化合物属性表**修改[main.py](main.py)中的变量`self.property_list` 
+6. 你也可以根据下面的**化合物属性表**修改[pubchem.py](pubchem.py)中的变量`self.property_list` 
 ```python
 self.property_list = [
             'IUPACName',
@@ -87,5 +87,16 @@ self.property_list = [
 ---
 **实例：**
 [https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/1,2,3,4,5/synonyms/JSON](https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/1,2,3,4,5/synonyms/JSON)
+# 打包
+```
+git clone https://github.com/XavierJiezou/python-pubchem-api.git
+cd python-pubchem-api
+pip install pipenv
+pipenv install
+pipenv shell
+pip install requests
+pip install pyinstaller
+pyinstaller -F -i favicon.ico pubchem.py
+```
 # 参考
 > [https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest)

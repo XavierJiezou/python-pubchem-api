@@ -17,9 +17,9 @@ git clone https://github.com/XavierJiezou/python-pubchem-api.git
 cd python-pubchem-api
 ```
 3. Write cid list to `cid.txt`.
-4. Run `python main.py`.
+4. Run `python pubchem.py`.
 5. Results can be seen in `data.json` or `data.csv`.
-6. You can also modify the variable `self.property_list` in [main.py](main.py) according to the `Compound Property Tables` below.
+6. You can also modify the variable `self.property_list` in [pubchem.py](pubchem.py) according to the `Compound Property Tables` below.
 ```python
 self.property_list = [
             'IUPACName',
@@ -96,7 +96,7 @@ pipenv install
 pipenv shell
 pip install requests
 pip install pyinstaller
-pyinstaller -F -i favicon.ico main.py
+pyinstaller -F -i favicon.ico pubchem.py
 ```
 # Reference
 > [https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest)
