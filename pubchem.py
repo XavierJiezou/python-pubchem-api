@@ -75,7 +75,7 @@ class PubchemCrawlFast():
         #     for item in data:
         #         line = ['"'+str(item[each])+'"' for each in header_list]
         #         f.write(','.join(line)+'\n')
-        with open(csv_name,'w') as f:
+        with open(csv_name,'w', newline='') as f:
             writer = csv.DictWriter(f, header_list)
             writer.writeheader()
             writer.writerows(data)
