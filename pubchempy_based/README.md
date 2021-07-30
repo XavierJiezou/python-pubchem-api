@@ -10,7 +10,7 @@ pip install pubchempy, alive_progress, retrying
 git clone https://github.com/XavierJiezou/python-pubchem-api.git
 ```
 2. `Cd` to the root path.
-```python
+```bash
 cd python-pubchem-api
 ```
 3. Write cid list to `cid.txt`.
