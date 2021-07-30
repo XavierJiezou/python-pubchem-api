@@ -1,4 +1,4 @@
-import os, json, requests
+import os, csv, json, requests
 
 
 class PubchemCrawlFast():
@@ -69,12 +69,16 @@ class PubchemCrawlFast():
         """
         csv_name = self.out_path.split('.')[0]+'.csv'
         header_list = ['CID']+self.property_list+['Synonym']
-        with open(csv_name, 'w') as f:
-            f.write(','.join(header_list)+'\n')
-        with open(csv_name, 'a') as f:
-            for item in data:
-                line = ['"'+str(item[each])+'"' for each in header_list]
-                f.write(','.join(line)+'\n')
+        # with open(csv_name, 'w') as f:
+        #     f.write(','.join(header_list)+'\n')
+        # with open(csv_name, 'a') as f:
+        #     for item in data:
+        #         line = ['"'+str(item[each])+'"' for each in header_list]
+        #         f.write(','.join(line)+'\n')
+        with open(csv_name,'w') as f:
+            writer = csv.DictWriter(f, header_list)
+            writer.writeheader()
+            writer.writerows(data)
 
     def __main__(self):
         print('Getting CID list: ')
