@@ -85,5 +85,16 @@ Get the synonym from cid.
 ---
 **Example:**
 [https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/1,2,3,4,5/synonyms/JSON](https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/1,2,3,4,5/synonyms/JSON)
+# Build
+```
+git clone https://github.com/XavierJiezou/python-pubchem-api.git
+cd python-pubchem-api
+pip install pipenv
+pipenv install
+pipenv shell
+pip install requests
+pip install pyinstaller
+pyinstaller -F -i favicon.ico main.py
+```
 # Reference
 > [https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest)
