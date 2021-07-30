@@ -1,22 +1,22 @@
 # Introduction
-Crawl data of compounds from [PubChem](https://pubchem.ncbi.nlm.nih.gov/).
+Crawl data of compounds from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) base on [PubChemPy](https://github.com/mcs07/PubChemPy)
 # Install
 ```bash
 pip install pubchempy, alive_progress, retrying
 ```
 # Usage
-1. Git clone the repo.
+1. `Git clone` the repo.
 ```bash
 git clone https://github.com/XavierJiezou/python-pubchem-api.git
 ```
-2. Cd to the root path.
+2. `Cd` to the root path.
 ```python
 cd python-pubchem-api
 ```
 3. Write cid list to `cid.txt`.
-4. Run `python main.py`.
+4. Run `python ./pubchempy_based/temp.py`.
 5. Results can be seen in `data.csv`.
-6. You can also modify the variable `self.maps` in [main.py](main.py) according to the `Compound Property Map` below.
+6. You can also modify the variable `self.maps` in [temp.py](temp.py) according to the `Compound Property Map` below.
 ```python
 class PubchemCrawl():
     def __init__(self, cid_path, out_path, max_workers=4):
@@ -35,7 +35,7 @@ class PubchemCrawl():
         }
 ```
 # Map
-Compound Property Map from [pubchempy](https://github.com/mcs07/PubChemPy).
+Compound Property Map from [PubChemPy](https://github.com/mcs07/PubChemPy).
 ```python
 PROPERTY_MAP = {
     'molecular_formula': 'MolecularFormula',
