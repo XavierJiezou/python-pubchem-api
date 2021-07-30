@@ -1,23 +1,24 @@
-[简体中文](README.zh.md) | English
-# Introduction
-Crawl data of compounds from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) base on [PubChemPy](https://github.com/mcs07/PubChemPy)
-# Install
+[English](README.md) | 简体中文
+# 简介
+从[PubChem](https://pubchem.ncbi.nlm.nih.gov/)爬取化合物的数据（基于Python的第三方库[PubChemPy](https://github.com/mcs07/PubChemPy)）。
+# 安装
 ```bash
 pip install pubchempy, alive_progress, retrying
 ```
-# Usage
-1. `Git clone` the repo.
+# 用法
+1. 克隆仓库。
 ```bash
 git clone https://github.com/XavierJiezou/python-pubchem-api.git
 ```
-2. `Cd` to the root path.
+2. `Cd`到根目录。
 ```bash
 cd python-pubchem-api
 ```
-3. Write cid list to `cid.txt`.
-4. Run `python ./pubchempy_based/temp.py`.
-5. Results can be seen in `data.csv`.
-6. You can also modify the variable `self.maps` in [temp.py](temp.py) according to the `Compound Property Map` below.
+3. 将`cid`列表复制到`cid.txt`。
+4. 运行命令`python ./pubchempy_based/temp.py`。
+5. 爬取结果保存在`data.csv`。
+6. 你也可以根据下面的`Compound Property Map`修改[temp.py](temp.py)中的变量`self.maps` 
+
 ```python
 class PubchemCrawl():
     def __init__(self, cid_path, out_path):
@@ -34,8 +35,8 @@ class PubchemCrawl():
             'h_bond_acceptor_count': 'HBondAcceptorCount',
         }
 ```
-# Map
-Compound Property Map from [PubChemPy](https://github.com/mcs07/PubChemPy).
+# 映射
+Compound Property Map 来自 [PubChemPy](https://github.com/mcs07/PubChemPy)。
 ```python
 PROPERTY_MAP = {
     'molecular_formula': 'MolecularFormula',
@@ -80,14 +81,14 @@ PROPERTY_MAP = {
     'conformer_count_3d': 'ConformerCount3D',
 }
 ```
-Some hidden properties can also be available.
+一些隐藏的属性也可以获得。
 ```python
 PROPERTY_MAP = {
     'cid': 'CID',
     'synonyms': 'Synonyms'
 }
 ```
-# Tips
-For faster speed, you can try multi-threading. However, if the number of workers in `ThreadPoolExecutor` is too large, an exception named `PUGREST.ServerBusy` may be raised. It is recommended that the maximum number of threads is less than 4.
-# Reference
+# 提示
+使用多线程编写可以获得更快的速度。但是`ThreadPoolExecutor`的线程数不能太大，不能会报错`PUGREST.ServerBusy` ，最大线程数最好不要超过4。
+# 参考
 > [https://github.com/mcs07/PubChemPy](https://github.com/mcs07/PubChemPy)

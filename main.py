@@ -1,4 +1,3 @@
-from alive_progress import alive_bar
 import requests
 import json
 
@@ -30,7 +29,7 @@ class PubchemCrawlFast():
         self.length = len(self.cid_list)
 
     def get_property_from_cid(self):
-        """Get the property list from cid
+        """Get the property from cid
         """
         limit = 300
         api = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/'
