@@ -1,6 +1,6 @@
 [简体中文](README.zh.md) | English
 # Introduction
-Crawl data of compounds from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) base on [PubChemPy](https://github.com/mcs07/PubChemPy)
+Crawl data of compounds from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) based on [PubChemPy](https://github.com/mcs07/PubChemPy)
 # Install
 ```bash
 pip install pubchempy, alive_progress, retrying
