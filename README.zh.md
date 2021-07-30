@@ -98,5 +98,8 @@ pip install requests
 pip install pyinstaller
 pyinstaller -F -i favicon.ico pubchem.py
 ```
+# 下载
+- Github: [pubchem-1.0.2-win64.zip](https://github.com/XavierJiezou/python-pubchem-api/releases/download/1.0.2/pubchem-1.0.2-win64.zip)
+- 蓝奏云: [pubchem-1.0.2-win64.zip](https://ghgxj.lanzoui.com/iJkums1a21c)
 # 参考
 > [https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest)
