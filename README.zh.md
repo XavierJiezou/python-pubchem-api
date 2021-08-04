@@ -101,5 +101,18 @@ pyinstaller -F -i favicon.ico pubchem.py
 # 下载
 - Github: [pubchem-1.0.2-win64.zip](https://github.com/XavierJiezou/python-pubchem-api/releases/download/1.0.2/pubchem-1.0.2-win64.zip)
 - 蓝奏云: [pubchem-1.0.2-win64.zip](https://ghgxj.lanzoui.com/iJkums1a21c)
+# 状态码
+| HTTP Status | Error Code            | General Error Category                                                    |
+|-------------|-----------------------|---------------------------------------------------------------------------|
+| 200         | (none)                | Success                                                                   |
+| 202         | (none)                | Accepted (asynchronous operation pending)                                 |
+| 400         | PUGREST.BadRequest    | Request is improperly formed (syntax error in the URL, POST body, etc.)   |
+| 404         | PUGREST.NotFound      | The input record was not found (e.g. invalid CID)                         |
+| 405         | PUGREST.NotAllowed    | Request not allowed (such as invalid MIME type in the HTTP Accept header) |
+| 504         | PUGREST.Timeout       | The request timed out, from server overload or too broad a request        |
+| 503         | PUGREST.ServerBusy    | Too many requests or server is busy, retry later                          |
+| 501         | PUGREST.Unimplemented | The requested operation has not (yet) been implemented by the server      |
+| 500         | PUGREST.ServerError   | Some problem on the server side (such as a database server down, etc.)    |
+| 500         | PUGREST.Unknown       | An unknown error occurred                                                 |
 # 参考
 > [https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest](https://pubchemdocs.ncbi.nlm.nih.gov/pug-rest)
