@@ -103,7 +103,7 @@ pyinstaller -F -i favicon.ico pubchem.py
 - Lanzou: [pubchem-1.0.2-win64.zip](https://ghgxj.lanzoui.com/iJkums1a21c)
 # Status Codes
 | HTTP Status | Error Code            | General Error Category                                                    |
-|-------------|-----------------------|---------------------------------------------------------------------------|
+|:------------|:----------------------|:--------------------------------------------------------------------------|
 | 200         | (none)                | Success                                                                   |
 | 202         | (none)                | Accepted (asynchronous operation pending)                                 |
 | 400         | PUGREST.BadRequest    | Request is improperly formed (syntax error in the URL, POST body, etc.)   |
